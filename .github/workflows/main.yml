@@ -46,10 +46,10 @@ jobs:
           scanArguments: "--regex --entropy=False --max_depth=5 --rules /regexes.json" # Add custom options here*    
           
           
-      #- name: Run Snyk to check for vulnerabilities
-      #  uses: snyk/actions/dotnet@master
-      #  env:
-      #    SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
+      - name: Run Snyk to check for vulnerabilities
+        uses: snyk/actions/dotnet@master
+        env:
+          SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
           
           
       # Deploy to Azure Web apps
